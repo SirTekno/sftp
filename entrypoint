@@ -72,6 +72,9 @@ function createUser() {
         chown $user /home/$user/.ssh/authorized_keys
         chmod 600 /home/$user/.ssh/authorized_keys
     fi
+    
+    mkdir /home/$user/files
+    chown $user /home/$user/files
 }
 
 if [[ $1 =~ ^--help$|^-h$ ]]; then
